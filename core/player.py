@@ -1,7 +1,7 @@
-from connect_four.core.board import Board
-from connect_four.exceptions import *
-from connect_four.exceptions.exceptions import OutOfBoundsExceptions
-from connect_four.core.color_class import Color
+from core.board import Board
+from exceptions import *
+from exceptions.exceptions import OutOfBoundsExceptions
+from core.color_class import Color
 
 
 

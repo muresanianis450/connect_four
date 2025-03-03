@@ -1,8 +1,8 @@
 from logging import exception
 
-from connect_four.ui.ui import UI
-from connect_four.ui.gui import ConnectFourGUI as GUI, main as gui_main
-from connect_four.tests.tests import TestConnectFourApp
+from ui.ui import UI
+from ui.gui import ConnectFourGUI as GUI, main as gui_main
+from tests.tests import TestConnectFourApp
 import unittest
 
 if __name__ == '__main__':

@@ -1,11 +1,11 @@
 import pygame
 import sys
 import os
-from connect_four.core.board import Board
-from connect_four.core.player import Player
-from connect_four.core.computer import ComputerPlayer
-from connect_four.core.color_class import Color
-from connect_four.exceptions.exceptions import ColumnFilled, OutOfBoundsExceptions
+from core.board import Board
+from core.player import Player
+from core.computer import ComputerPlayer
+from core.color_class import Color
+from exceptions.exceptions import ColumnFilled, OutOfBoundsExceptions
 
 # Constants
 SCREEN_WIDTH = 700
@@ -36,22 +36,25 @@ COLOR_OPTIONS = {
 pygame.init()
 pygame.mixer.init()  # Initialize the mixer for playing sounds
 
-# Correct file paths (use double backslashes or forward slashes)
-WIN_SOUND_PATH = "C:/Users/mures/OneDrive/2024 dump/Documents/GitHub/a10-muresanianis450/win_sound.wav"
-LOSE_SOUND_PATH = "C:/Users/mures/OneDrive/2024 dump/Documents/GitHub/a10-muresanianis450/loose_sound.wav"
 
-# Validate sound file paths
+
+#Sound no more valid, please add a path in order to use sound in your code
+"""# Correct file paths (use double backslashes or forward slashes)
+WIN_SOUND_PATH = "C:/Users/mures/OneDrive/2024 dump/Documents/GitHub/a10-muresanianis450/win_sound.wav"
+LOSE_SOUND_PATH = "C:/Users/mures/OneDrive/2024 dump/Documents/GitHub/a10-muresanianis450/loose_sound.wav"""
+
+"""# Validate sound file paths
 if not os.path.exists(WIN_SOUND_PATH) or not os.path.exists(LOSE_SOUND_PATH):
     print("Sound files are missing. Ensure paths are correct.")
-    sys.exit()
+    sys.exit()"""
 
-# Load sounds with error handling
+"""# Load sounds with error handling
 try:
     win_sound = pygame.mixer.Sound(WIN_SOUND_PATH)
     lose_sound = pygame.mixer.Sound(LOSE_SOUND_PATH)
 except pygame.error as e:
     print(f"Error loading sound files: {e}")
-    sys.exit()
+    sys.exit()"""
 
 # Create the screen
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -237,7 +240,7 @@ def main():
                         if game.check_game_over():
                             draw_board(game.board, game.human_player.color, game.computer_player.color)
                             pygame.mixer.stop()
-                            pygame.mixer.Sound.play(win_sound)
+                            #pygame.mixer.Sound.play(win_sound)
                         else:
                             game.switch_player()
 
@@ -247,7 +250,7 @@ def main():
             if game.check_game_over():
                 draw_board(game.board, game.human_player.color, game.computer_player.color)
                 pygame.mixer.stop()
-                pygame.mixer.Sound.play(lose_sound)
+                #pygame.mixer.Sound.play(lose_sound)
             else:
                 game.switch_player()
 

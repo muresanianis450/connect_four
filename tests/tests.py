@@ -1,10 +1,10 @@
 import unittest
-from connect_four.core.board import Board
-from connect_four.core.player import Player
-from connect_four.core.computer import ComputerPlayer
-from connect_four.core.color_class import Color
-from connect_four.application.game_manager import ConnectFourApp
-from connect_four.exceptions.exceptions import ColumnFilled, OutOfBoundsExceptions
+from core.board import Board
+from core.player import Player
+from core.computer import ComputerPlayer
+from core.color_class import Color
+from application.game_manager import ConnectFourApp
+from exceptions.exceptions import ColumnFilled, OutOfBoundsExceptions
 
 class TestConnectFourApp(unittest.TestCase):
 

@@ -1,9 +1,9 @@
 from pygame.key import set_text_input_rect
 
-from connect_four.core.board import Board
-from connect_four.exceptions.exceptions import OutOfBoundsExceptions, ColumnFilled
+from core.board import Board
+from exceptions.exceptions import OutOfBoundsExceptions, ColumnFilled
 from random import randint
-from connect_four.core.color_class import Color
+from core.color_class import Color
 from typing import Tuple, Optional
 
 class ComputerPlayer:

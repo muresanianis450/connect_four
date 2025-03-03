@@ -1,4 +1,4 @@
-from connect_four.exceptions.exceptions import OutOfBoundsExceptions, ColumnFilled
+from exceptions.exceptions import OutOfBoundsExceptions, ColumnFilled
 
 
 #creating a board with 6 rows and 7 columns, np.zeros creates me a matrix 6X7
