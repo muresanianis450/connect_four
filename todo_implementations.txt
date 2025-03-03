@@ -1,0 +1,38 @@
+Human color will be represented by one of this colors:
+        RED = 1
+        GREEN = 2
+        BLUE = 3
+        PINK = 4
+        YELLOW = 5
+
+Computer Color will be represented by the color WHITE = 6
+
+GOAL -> first to form a 4 horizontal, vertical or diagonal line of personal tokens wins.
+
+
+table = 6 x 7 ( rows x columns )
+
+
+
+Computer strategy
+    Random_move_strategy
+    One_move_strategy
+    AI minimax strategy( TO BE IMPLEMENTED )
+
+
+
+Layer Interactions
+UI → Application Layer:
+The UI passes user input to the GameManager and displays updates.
+
+Application Layer → Domain Layer:
+The GameManager uses the Board and Player classes to manage the game's state.
+
+Application Layer → Infrastructure Layer:
+The GameManager invokes AI methods when the computer takes its turn.
+
+
+In the computer.py
+ComputerClass -> make_move: has the strategy where it puts the disc when the human player has one
+                            more move to win or when it has one more move to win. This return only the column where
+                            it shall add the disc which will be sent and then added in the game_manager.py
